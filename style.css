@@ -1,0 +1,280 @@
+:root{
+    --primary-color: darkslategray;
+    --secondry-color: gray;
+}
+
+body{
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr auto 3fr;
+}
+aside{
+    background-color: var(--primary-color);
+    padding: 3rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+    
+}
+aside>*{
+    color: white;
+}
+.asideHeading{
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+}
+aside>img{
+    border-radius: 100%;
+    border: 2px solid white;
+}
+.contactContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content:first baseline;
+    align-items: center;
+}
+.contactContainer>img{
+    margin-right: 1rem;
+}
+main{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    padding: 3rem;
+}
+.heading{
+    padding-left: 3rem;
+}
+.uname{
+    font-size: 4em;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+.major{
+    color: var(--secondry-color);
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+.blue{
+    border-bottom: 7px solid var(--primary-color);
+    width: 7vw;
+}
+.mainHeading{
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.mainParagraph{
+    font-size: 1.3em;
+    color: var(--secondry-color);
+    margin: 0;
+}
+.mainParagraphHeading{
+    font-size: 1.3em;
+    color: var(--secondry-color);
+    font-weight: bold;
+    margin: 0;
+}
+.workExpDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.workExpList{
+    color: var(--secondry-color);
+    font-size: 1.3em;
+}
+.refrencesContainer{display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.refParagraphHeading{
+    font-size: 1.3em;
+    color: var(--secondry-color);
+    font-weight: bold;
+    margin: 0;   
+}
+.refParagraph{
+    font-size: 1.3em;
+    color: var(--secondry-color);
+    margin: 0;
+}
+
+/* ******************************************* */
+.line{
+    position: relative;
+    margin: 2rem;
+    border-left: 5px solid var(--primary-color);
+    height: 95%;
+}
+.circul{
+    background-color: var(--primary-color);
+    width: 1vw;
+    height: 2vh;
+    border-radius: 100%;
+}
+.circul1{
+    position: absolute;
+    left: 0%;
+    top: 25%;
+    transform: translate(-57%,-25%);
+}
+.circul2{
+    position: absolute;
+    left: 0%;
+    top: 40%;
+    transform: translate(-57%,-40%);
+}
+.circul3{
+    position: absolute;
+    left: 0%;
+    bottom: 13%;
+    transform: translate(-57%,-13%);
+}
+
+/* ******************************************************************************************************* */
+/* Hover Effect: */
+
+/* name and major */
+.unameHover{
+    display: none;
+}
+.uname:hover .unameHover{
+    display: block;
+}
+.uname:hover .unameNoHover {
+    display: none;
+}
+.unameNoHover::after .uname{
+    display: block;
+}
+
+.majorHover{
+    display: none;
+}
+.major:hover .majorHover{
+    display: block;
+}
+.major:hover .majorNoHover {
+    display: none;
+}
+.majorNoHover::after .major{
+    display: block;
+}
+
+
+/* img */
+.img{
+    width: 150px;
+    height: 150px;
+}
+.img .imgHover{
+    display: none;
+}
+.img:hover .imgHover{
+    display: block;
+}
+.img:hover .imgNoHover{
+    display: none;
+}
+.img .imgNoHover::after{
+    display: block;
+}
+
+/* contact Info */
+.contactInfoHover{
+    display: none;
+}
+p.contactInfo:hover .contactInfoHover{
+    display: block;
+}
+p.contactInfo:hover .contactInfoNoHover {
+    display: none;
+}
+.contactInfoNoHover::after .contactInfo{
+    display: block;
+    /* content: "+966 540823348"; */
+}
+
+/* education */
+.education>.educationHover{
+    display: none;
+}
+.education:hover .educationHover{
+    display: block;
+}
+.education:hover .educationNoHover{
+    display: none;
+}
+.education .educationNoHover::after{
+    display: block;
+}
+
+/*  skills */
+.skillsContainer>.skillsListHover{
+    display: none;
+}
+.skillsContainer:hover .skillsListHover{
+    display: block;
+}
+.skillsContainer:hover .skillsListNoHover{
+    display: none;
+}
+.skillsContainer .skillsListNoHover::after{
+    display: block;
+}
+
+/* language */
+.language>.languageListHover{
+    display: none;
+}
+.language:hover .languageListHover{
+    display: block;
+}
+.language:hover .languageListNoHover{
+    display: none;
+}
+.language .languageListNoHover::after{
+    display: block;
+}
+
+/* profile */
+.mainParagraph>.mainParagraphHover{
+    display: none;
+}
+.mainParagraph:hover .mainParagraphHover{
+    display: block;
+}
+.mainParagraph:hover .mainParagraphNoHover{
+    display: none;
+}
+.mainParagraph .mainParagraphNoHover::after{
+    display: block;
+}
+
+/* Work experince */
+.workExps>.workExpsHover{
+    display: none;
+}
+.workExps:hover .workExpsHover{
+    display: block;
+}
+.workExps:hover .workExpsNoHover{
+    display: none;
+}
+.workExps .workExpsNoHover::after{
+    display: block;
+}
+
+/* refrences Info */
+.refrencesInfo>.refrencesInfoHover{
+    display: none;
+}
+.refrencesInfo:hover .refrencesInfoHover{
+    display: block;
+}
+.refrencesInfo:hover .refrencesInfoNoHover{
+    display: none;
+}
+.refrencesInfo .refrencesInfoNoHover::after{
+    display: block;
+}
